@@ -1,0 +1,50 @@
+ _           _ _     _
+| |__  _   _(_) | __| |
+| '_ \| | | | | |/ _` |
+| |_) | |_| | | | (_| |
+|_.__/ \__,_|_|_|\__,_|
+
+This is a small tool for building an application with a minimal
+amount of red tape.
+
+Usage:
+
+  build appname
+
+How it works:
+
+  1) open appname.c
+  2) look for the key lines in appname.c
+  3) look for key lines in dependencies of appname.c
+  4) compile everything
+
+How to add to your app:
+
+//LIBS ...
+
+Specify the linker arguments.
+Example:
+
+  //LIBS -lncurses
+
+
+//USES
+
+Specify dependencies.
+Example:
+
+  //USES a b c d
+
+a, b, c, and d will be built and linked against appname
+
+
+//FLAGS
+
+Specify custom compiler flags.
+Example:
+
+  //FLAGS -Wall -O3
+
+
+All of these lines must start in the first column of the code;
+indentions will be ignored silently.
