@@ -200,7 +200,7 @@ void make(char *fn)
   *objs = *libs = *flags = 0;
   if (build(fn, filedate(fn)))
   {
-    snprintf(cmd, 256, "gcc %s %s %s -o %s", flags, libs, objs, fn);
+    snprintf(cmd, 256, "gcc %s %s %s -o %s", flags, objs, libs, fn);
     puts(cmd);
     if (system(cmd))
       exit(1);
