@@ -5,10 +5,18 @@ build
 Description
 -----------
 This is a small tool for building an application with a minimal
-amount of red tape.
+amount of red tape. It allows you to specify compiler flags,
+libraries, and dependencies without using a separate file.
 
-Usage
------
+Compiling
+---------
+
+::
+
+   gcc build.c -o build
+
+Usaging It
+----------
 
 ::
 
@@ -48,6 +56,5 @@ Compiler Flags:
 
    //FLAGS -Wall -O3
 
-
 All of these lines must start in the first column of the code;
-indentions will be ignored silently.
+indented lines are ignored by build.
